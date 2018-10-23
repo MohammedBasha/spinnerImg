@@ -5,8 +5,13 @@ document.querySelector("img.preview").addEventListener("click", function(e) {
         spinnerImg = document.createElement("img"); // create an image for the spinning one
 
         overlayDiv.style.display = "block";
-        highResImg.className = "bg-img";
+        highResImg.className = "bgImg";
         highResImg.src = lowResSrc.substr(0, lowResSrc.length - 7) + ".jpg";
-        highResImg.style.maxWidth = "100%";
         overlayDiv.appendChild(highResImg);
+
+        spinnerImg.className = "spinner";
+        spinnerImg.src = "images/spinner.gif";
+        overlayDiv.appendChild(spinnerImg);
+
+        
 }, false);
